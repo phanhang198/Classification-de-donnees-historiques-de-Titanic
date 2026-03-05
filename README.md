@@ -19,43 +19,69 @@ Les données sont fournies sous deux fichiers principaux :
 * <img width="1232" height="20" alt="image" src="https://github.com/user-attachments/assets/b4fefbcd-ef58-494b-944b-b24b76a45571" />
 
 * ***Tableau de corélation des colonnes dont les valeurs sont numériques***
-<img width="283" height="64" alt="image" src="https://github.com/user-attachments/assets/f4bef474-bde9-402b-a787-1010732bb694" />
+<img width="439" height="344" alt="image" src="https://github.com/user-attachments/assets/cc5fbfd1-5d50-4cfd-b0ff-54fa3399fdf1" />
 
 
-
+<img width="350" height="262" alt="image" src="https://github.com/user-attachments/assets/eded6d3e-964e-4a39-b1f5-d77a3638f4a4" />
 
 ### 2. Nettoyage et préparation des données
+Avant le nettoyage, on va faire une copy de dataset pour travailler avec, en gardant le dataset original.
+
+<img width="186" height="31" alt="image" src="https://github.com/user-attachments/assets/1bd07b7c-b71d-4b3b-a5aa-fab0a0a2ea43" />
 
 Une phase de **data preprocessing** a été réalisée afin d’assurer la qualité et l’exploitabilité des données :
 
-* Traitement des **valeurs manquantes**, notamment dans la variable `Age`.
-* Suppression ou transformation de certaines variables peu informatives comme `Ticket` ou `Name`.
-* Encodage des variables catégorielles (`Sex`, `Embarked`) pour permettre leur utilisation dans les modèles.
-* Création de nouvelles variables dérivées (ex : taille de la famille à partir de `SibSp` et `Parch`). ([GitHub][3])
+* Traitement des **valeurs manquantes**
+  
+<img width="744" height="118" alt="image" src="https://github.com/user-attachments/assets/f4684f92-d204-4ebb-9d56-11f6ec6797db" />
+
+<img width="227" height="178" alt="image" src="https://github.com/user-attachments/assets/0488aea3-b974-4fdd-a7c2-fa0f64f072b0" />
+
+La plupart des données manquantes se concentrent au colonne "Cabines" qui n'est pâs très important.
+On va remplacer les données manquantes, par le valeur médian du colonne comme suivant:
+
+<img width="533" height="148" alt="image" src="https://github.com/user-attachments/assets/713f25b9-8d62-4c6c-b3d2-8f49c834e095" />
+
 
 ### 3. Analyse exploratoire des données (EDA)
 
 L’analyse exploratoire a permis d’identifier plusieurs tendances importantes :
 
 * Les **femmes avaient une probabilité de survie plus élevée que les hommes**.
+
+<img width="1186" height="176" alt="image" src="https://github.com/user-attachments/assets/5eb60512-3a92-4242-8bdd-9ae83f44b8b8" />
+
+* Anamyse en fonction d'âge*
+<img width="400" height="128" alt="image" src="https://github.com/user-attachments/assets/a841f62f-0477-42bb-84af-1f8fadddce66" />
+
+
+<img width="399" height="313" alt="image" src="https://github.com/user-attachments/assets/39ed225e-9246-4c65-85f8-d4b89d00c297" />
+
+
 * Les passagers de **première classe avaient un taux de survie supérieur** à ceux des classes inférieures.
-* Les **enfants et les passagers plus jeunes** avaient globalement de meilleures chances de survie. ([cphaigh.github.io][4])
+
+<img width="1104" height="198" alt="image" src="https://github.com/user-attachments/assets/993f7827-1fcd-4a63-b89c-528d588125a1" />
+
+<img width="386" height="279" alt="image" src="https://github.com/user-attachments/assets/09f6302a-11b8-4fcd-9329-5faa7410bdfc" />
+
+Vu que les hommes ne sont pas les personnes priviligiés, on ca faire une analyse plus profonde.
+
+* Anamyse de probabilité de survie des hommes en fonction de classe*
+
+``` python
+
+Homme_aBord = dt_copy[dt_copy['Sex']== 'male']
+Homme_aBord.head()
+sns.barplot(x="Classe", y='Survived', data=Homme_surBord[:891].groupby('Classe').mean()['Survived'].reset_index(), palette="Set1").set_title('Moyenne de survie des Hommes en fonction de classe')
+plt.savefig("Moyenne de survie Classe_Homme.png")
+
+```
+<img width="439" height="307" alt="image" src="https://github.com/user-attachments/assets/42a69407-b1d1-4364-8c0b-f6596c1d30ea" />
 
 Ces observations suggèrent que des facteurs démographiques et socio-économiques ont joué un rôle déterminant dans les chances de survie.
 
-### 4. Modélisation prédictive
 
-Le problème est formulé comme un **problème de classification binaire**, visant à prédire la variable `Survived`. Plusieurs algorithmes peuvent être appliqués, notamment :
-
-* Régression logistique
-* Decision Tree
-* Random Forest
-* Naive Bayes
-* K-Nearest Neighbors
-
-Ces modèles sont évalués à l’aide de métriques telles que **l’accuracy** ou la validation croisée afin d’estimer leur performance sur des données inconnues. ([Medium][5])
-
-### 5. Conclusion
+### 4. Conclusion
 
 Cette analyse met en évidence l’importance de la **qualité des données, de l’analyse exploratoire et du feature engineering** dans la construction de modèles prédictifs performants. Le dataset Titanic constitue un cas d’étude classique permettant d’illustrer le processus complet d’un projet de data science, depuis la compréhension des données jusqu’à la création d’un modèle de classification.
 
