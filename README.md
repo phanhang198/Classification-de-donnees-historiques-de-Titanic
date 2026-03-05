@@ -35,8 +35,6 @@ Une phase de **data preprocessing** a été réalisée afin d’assurer la quali
   
 <img width="744" height="118" alt="image" src="https://github.com/user-attachments/assets/f4684f92-d204-4ebb-9d56-11f6ec6797db" />
 
-<img width="227" height="178" alt="image" src="https://github.com/user-attachments/assets/0488aea3-b974-4fdd-a7c2-fa0f64f072b0" />
-
 La plupart des données manquantes se concentrent au colonne "Cabines" qui n'est pâs très important.
 On va remplacer les données manquantes, par le valeur médian du colonne comme suivant:
 
