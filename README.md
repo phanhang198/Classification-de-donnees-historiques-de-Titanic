@@ -22,8 +22,6 @@ Les données sont fournies sous deux fichiers principaux :
 <img width="439" height="344" alt="image" src="https://github.com/user-attachments/assets/cc5fbfd1-5d50-4cfd-b0ff-54fa3399fdf1" />
 
 
-<img width="350" height="262" alt="image" src="https://github.com/user-attachments/assets/eded6d3e-964e-4a39-b1f5-d77a3638f4a4" />
-
 ### 2. Nettoyage et préparation des données
 Avant le nettoyage, on va faire une copy de dataset pour travailler avec, en gardant le dataset original.
 
