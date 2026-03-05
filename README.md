@@ -11,7 +11,7 @@ Les données sont fournies sous deux fichiers principaux :
 * **train.csv** : contient les observations avec la variable cible (survie).
 * **test.csv** : contient les passagers pour lesquels la survie doit être prédite.
 
-* *** Concaténer le fichier Train et Test
+* ***Concaténer le fichier Train et Test
 
 <img width="576" height="113" alt="image" src="https://github.com/user-attachments/assets/17d21d2b-c899-425e-9f0b-f111d59915cc" />
 
