@@ -4,12 +4,19 @@ Cette analyse porte sur le dataset de la compétition Titanic: Machine Learning 
 
 ### 1. Compréhension du dataset
 
-Le dataset contient des informations démographiques et socio-économiques sur les passagers, telles que l’âge, le sexe, la classe du billet ou encore le port d’embarquement. La variable cible est **Survived**, indiquant si le passager a survécu (1) ou non (0). Les variables principales incluent notamment `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Cabin` et `Embarked`. ([Dataquest][1])
+Le dataset contient des informations démographiques et socio-économiques sur les passagers, telles que l’âge, le sexe, la classe du billet ou encore le port d’embarquement. La variable cible est **Survived**, indiquant si le passager a survécu (1) ou non (0). Les variables principales incluent notamment `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Cabin` et `Embarked`. 
 
 Les données sont fournies sous deux fichiers principaux :
 
 * **train.csv** : contient les observations avec la variable cible (survie).
-* **test.csv** : contient les passagers pour lesquels la survie doit être prédite. ([DataCamp][2])
+* **test.csv** : contient les passagers pour lesquels la survie doit être prédite.
+
+* *** Concaténer le fichier Train et Test
+
+<img width="576" height="113" alt="image" src="https://github.com/user-attachments/assets/17d21d2b-c899-425e-9f0b-f111d59915cc" />
+
+
+
 
 ### 2. Nettoyage et préparation des données
 
