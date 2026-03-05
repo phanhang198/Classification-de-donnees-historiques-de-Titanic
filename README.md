@@ -48,7 +48,7 @@ L’analyse exploratoire a permis d’identifier plusieurs tendances importantes
 <img width="1186" height="176" alt="image" src="https://github.com/user-attachments/assets/5eb60512-3a92-4242-8bdd-9ae83f44b8b8" />
 
 * Anamyse en fonction d'âge*
-* 
+
 <img width="400" height="128" alt="image" src="https://github.com/user-attachments/assets/a841f62f-0477-42bb-84af-1f8fadddce66" /><br>
 
 
