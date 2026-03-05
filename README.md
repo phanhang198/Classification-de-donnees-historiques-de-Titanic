@@ -15,6 +15,12 @@ Les données sont fournies sous deux fichiers principaux :
 
 <img width="576" height="113" alt="image" src="https://github.com/user-attachments/assets/17d21d2b-c899-425e-9f0b-f111d59915cc" />
 
+* ***Renommer les colonnes***
+* <img width="1232" height="20" alt="image" src="https://github.com/user-attachments/assets/b4fefbcd-ef58-494b-944b-b24b76a45571" />
+
+* ***Tableau de corélation des colonnes dont les valeurs sont numériques***
+<img width="283" height="64" alt="image" src="https://github.com/user-attachments/assets/f4bef474-bde9-402b-a787-1010732bb694" />
+
 
 
 
